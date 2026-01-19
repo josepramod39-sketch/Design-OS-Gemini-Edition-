@@ -8,7 +8,7 @@ First, identify the target section and verify that `spec.md`, `data.json`, and `
 
 Read `/product/product-roadmap.md` to get the list of available sections.
 
-If there's only one section, auto-select it. If there are multiple sections, use the AskUserQuestion tool to ask which section the user wants to create a screen design for.
+If there's only one section, auto-select it. If there are multiple sections, ask which section the user wants to create a screen design for.
 
 Then verify all required files exist:
 
@@ -31,6 +31,7 @@ Stop here if any file is missing.
 Check for optional enhancements:
 
 **Design Tokens:**
+
 - Check if `/product/design-system/colors.json` exists
 - Check if `/product/design-system/typography.json` exists
 
@@ -39,6 +40,7 @@ If design tokens exist, read them and use them for styling. If they don't exist,
 "Note: Design tokens haven't been defined yet. I'll use default styling, but for consistent branding, consider running `/design-tokens` first."
 
 **Shell:**
+
 - Check if `src/shell/components/AppShell.tsx` exists
 
 If shell exists, the screen design will render inside the shell in Design OS. If not, show a warning:
@@ -61,7 +63,7 @@ Identify what views are needed based on the spec. Common patterns:
 
 ## Step 4: Clarify the Screen Design Scope
 
-If the spec implies multiple views, use the AskUserQuestion tool to confirm which view to build first:
+If the spec implies multiple views, confirm which view to build first:
 
 "The specification suggests a few different views for **[Section Title]**:
 
@@ -134,16 +136,19 @@ export function InvoiceList({
 ### Applying Design Tokens
 
 **If `/product/design-system/colors.json` exists:**
+
 - Use the primary color for buttons, links, and key accents
 - Use the secondary color for tags, highlights, secondary elements
 - Use the neutral color for backgrounds, text, and borders
 - Example: If primary is `lime`, use `lime-500`, `lime-600`, etc. for primary actions
 
 **If `/product/design-system/typography.json` exists:**
+
 - Note the font choices for reference in comments
 - The fonts will be applied at the app level, but use appropriate font weights
 
 **If design tokens don't exist:**
+
 - Fall back to `stone` for neutrals and `lime` for accents (Design OS defaults)
 
 ### What to Include

@@ -14,7 +14,7 @@ Stop here if the roadmap doesn't exist.
 
 Read `/product/product-roadmap.md` to get the list of available sections.
 
-If there's only one section, auto-select it. If there are multiple sections, use the AskUserQuestion tool to ask which section the user wants to work on:
+If there's only one section, auto-select it. If there are multiple sections, ask which section the user wants to work on:
 
 "Which section would you like to define the specification for?"
 
@@ -32,7 +32,7 @@ Wait for their response. The user may provide raw notes or ask to proceed with q
 
 ## Step 4: Ask Clarifying Questions
 
-Use the AskUserQuestion tool to ask 4-6 targeted questions to define:
+Ask 4-6 targeted questions to define:
 
 - **Main user actions/tasks** - What can users do in this section?
 - **Information to display** - What data and content needs to be shown?
@@ -41,6 +41,7 @@ Use the AskUserQuestion tool to ask 4-6 targeted questions to define:
 - **Scope boundaries** - What should be explicitly excluded?
 
 Example questions (adapt based on their input and the section):
+
 - "What are the main actions a user can take in this section?"
 - "What information needs to be displayed on the primary view?"
 - "Walk me through the main user flow - what happens step by step?"
@@ -58,7 +59,8 @@ If a shell design has been created for this project (check if `/src/shell/compon
 
 Most sections use the app shell, but some pages like public-facing views, landing pages, or embedded widgets should be standalone."
 
-Use AskUserQuestion with options:
+Ask the user to choose:
+
 - "Inside app shell" - The default for most in-app sections
 - "Standalone (no shell)" - For public pages, landing pages, or embeds
 
@@ -74,11 +76,13 @@ Once you have enough information, present a draft specification:
 [2-3 sentence summary of what this section does]
 
 **User Flows:**
+
 - [Flow 1]
 - [Flow 2]
 - [Flow 3]
 
 **UI Requirements:**
+
 - [Requirement 1]
 - [Requirement 2]
 - [Requirement 3]
@@ -116,6 +120,7 @@ Once the user approves, create the file at `product/sections/[section-id]/spec.m
 ```
 
 **Important:**
+
 - Set `shell: true` if the section should display inside the app shell (this is the default)
 - Set `shell: false` if the section should display as a standalone page without the shell
 

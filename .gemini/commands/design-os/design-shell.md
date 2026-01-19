@@ -13,6 +13,7 @@ First, verify prerequisites exist:
 If overview or roadmap are missing:
 
 "Before designing the shell, you need to define your product and sections. Please run:
+
 1. `/product-vision` — Define your product
 2. `/product-roadmap` — Define your sections"
 
@@ -49,7 +50,7 @@ Wait for their response.
 
 ## Step 3: Gather Design Details
 
-Use AskUserQuestion to clarify:
+Ask questions to clarify:
 
 - "Where should the user menu (avatar, logout) appear?"
 - "Do you want the sidebar collapsible on mobile, or should it become a hamburger menu?"
@@ -65,16 +66,19 @@ Once you understand their preferences:
 **Layout Pattern:** [Sidebar/Top Nav/Minimal]
 
 **Navigation Structure:**
+
 - [Nav Item 1] → [Section]
 - [Nav Item 2] → [Section]
 - [Nav Item 3] → [Section]
 - [Additional items like Settings, Help]
 
 **User Menu:**
+
 - Location: [Top right / Bottom of sidebar]
 - Contents: Avatar, user name, logout
 
 **Responsive Behavior:**
+
 - Desktop: [How it looks]
 - Mobile: [How it adapts]
 
@@ -118,6 +122,7 @@ Create `/product/shell/spec.md`:
 Create the shell components at `src/shell/components/`:
 
 ### AppShell.tsx
+
 The main wrapper component that accepts children and provides the layout structure.
 
 ```tsx
@@ -131,15 +136,19 @@ interface AppShellProps {
 ```
 
 ### MainNav.tsx
+
 The navigation component (sidebar or top nav based on the chosen pattern).
 
 ### UserMenu.tsx
+
 The user menu with avatar and dropdown.
 
 ### index.ts
+
 Export all components.
 
 **Component Requirements:**
+
 - Use props for all data and callbacks (portable)
 - Apply design tokens if they exist (colors, fonts)
 - Support light and dark mode with `dark:` variants
@@ -190,12 +199,14 @@ export default function ShellPreview() {
 If design tokens exist, apply them to the shell components:
 
 **Colors:**
+
 - Read `/product/design-system/colors.json`
 - Use primary color for active nav items, key accents
 - Use secondary color for hover states, subtle highlights
 - Use neutral color for backgrounds, borders, text
 
 **Typography:**
+
 - Read `/product/design-system/typography.json`
 - Apply heading font to nav items and titles
 - Apply body font to other text
@@ -208,6 +219,7 @@ Let the user know:
 "I've designed the application shell for **[Product Name]**:
 
 **Created files:**
+
 - `/product/shell/spec.md` — Shell specification
 - `src/shell/components/AppShell.tsx` — Main shell wrapper
 - `src/shell/components/MainNav.tsx` — Navigation component
@@ -216,6 +228,7 @@ Let the user know:
 - `src/shell/ShellPreview.tsx` — Preview wrapper
 
 **Shell features:**
+
 - [Layout pattern] layout
 - Navigation for all [N] sections
 - User menu with avatar and logout

@@ -15,7 +15,7 @@ To capture screenshots, I need the Playwright MCP server installed. Please run:
 claude mcp add playwright npx @playwright/mcp@latest
 ```
 
-Then restart this Claude Code session and run `/screenshot-design` again.
+Then restart this Claude Code session and run `/screenshot-design` again
 ---
 
 Do not substitute different package names or modify the command. Output it exactly as written above.
@@ -30,11 +30,12 @@ Read `/product/product-roadmap.md` to get the list of available sections, then c
 
 If only one screen design exists across all sections, auto-select it.
 
-If multiple screen designs exist, use the AskUserQuestion tool to ask which one to screenshot:
+If multiple screen designs exist, ask which one to screenshot:
 
 "Which screen design would you like to screenshot?"
 
 Present the available screen designs as options, grouped by section:
+
 - [Section Name] / [ScreenDesignName]
 - [Section Name] / [ScreenDesignName]
 
@@ -58,6 +59,7 @@ The screen design URL pattern is: `http://localhost:3000/sections/[section-id]/s
 4. Use `browser_take_screenshot` to capture the page (without the navigation bar)
 
 **Screenshot specifications:**
+
 - Capture at desktop viewport width (1280px recommended)
 - Use **full page screenshot** to capture the entire scrollable content (not just the viewport)
 - PNG format for best quality
@@ -73,6 +75,7 @@ The Playwright MCP tool can only save screenshots to its default output director
    - The file will be saved to `.playwright-mcp/[filename].png`
 
 2. **Then**, copy the file to the product folder using Bash:
+
    ```bash
    cp .playwright-mcp/[filename].png product/sections/[section-id]/[filename].png
    ```
@@ -80,6 +83,7 @@ The Playwright MCP tool can only save screenshots to its default output director
 **Naming convention:** `[screen-design-name]-[variant].png`
 
 Examples:
+
 - `invoice-list.png` (main view)
 - `invoice-list-dark.png` (dark mode variant)
 - `invoice-detail.png`
@@ -98,6 +102,7 @@ The screenshot captures the **[ScreenDesignName]** screen design for the **[Sect
 If they want additional screenshots (e.g., dark mode, different states):
 
 "Would you like me to capture any additional screenshots? For example:
+
 - Dark mode version
 - Mobile viewport
 - Different states (empty, loading, etc.)"

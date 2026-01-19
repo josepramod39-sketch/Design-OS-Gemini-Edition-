@@ -8,7 +8,7 @@ First, identify the target section and verify that `spec.md` exists for it.
 
 Read `/product/product-roadmap.md` to get the list of available sections.
 
-If there's only one section, auto-select it. If there are multiple sections, use the AskUserQuestion tool to ask which section the user wants to generate data for.
+If there's only one section, auto-select it. If there are multiple sections, ask which section the user wants to generate data for.
 
 Then check if `product/sections/[section-id]/spec.md` exists. If it doesn't:
 
@@ -21,6 +21,7 @@ Stop here if the spec doesn't exist.
 Check if `/product/data-model/data-model.md` exists.
 
 **If it exists:**
+
 - Read the file to understand the global entity definitions
 - Entity names in your sample data should match the global data model
 - Use the descriptions and relationships as a guide
@@ -93,7 +94,7 @@ I'll create [X] realistic [Entity1] records with varied content to make your scr
 
 Does this structure make sense for your product? Any adjustments?"
 
-Use the AskUserQuestion tool if there are ambiguities about what data is needed.
+Ask clarifying questions if there are ambiguities about what data is needed.
 
 ## Step 5: Generate the Data File
 
@@ -144,6 +145,7 @@ Example structure:
 ```
 
 The `_meta` descriptions should:
+
 - Use plain, non-technical language
 - Explain what each model represents in the context of the user's product
 - Describe relationships in terms of "contains", "belongs to", "links to", etc.

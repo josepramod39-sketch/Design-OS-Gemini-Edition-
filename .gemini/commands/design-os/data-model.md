@@ -35,13 +35,14 @@ Wait for their response before proceeding.
 
 ## Step 3: Refine Entities
 
-Use the AskUserQuestion tool to clarify:
+Ask targeted questions to clarify:
 
 - "Are there any other core entities in your system that users will create, view, or manage?"
 - "For [Entity], what are the most important pieces of information it contains? (Don't need every field, just the key ones)"
 - "How do these entities relate to each other?"
 
 Keep the conversation focused on:
+
 - **Entity names** — What are the main nouns?
 - **Plain-language descriptions** — What does each entity represent?
 - **Relationships** — How do entities connect to each other?
@@ -103,9 +104,11 @@ Let the user know:
 "I've created your data model at `/product/data-model/data-model.md`.
 
 **Entities defined:**
+
 - [List entities]
 
 **Relationships:**
+
 - [List key relationships]
 
 This provides a shared vocabulary that will be used when generating sample data for your sections. When you run `/sample-data`, it will reference this model to ensure consistency.
