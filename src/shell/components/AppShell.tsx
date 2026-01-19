@@ -27,20 +27,20 @@ export function AppShell({
           <div className="flex items-center gap-8">
             <div className="flex items-center gap-2">
               <div className="h-8 w-8 rounded-lg bg-violet-600 flex items-center justify-center">
-                <span className="text-white font-bold font-mono">E</span>
+                <span className="text-white font-bold font-mono">D</span>
               </div>
               <span className="text-lg font-bold font-heading tracking-tight hidden sm:block">
-                EdithRp
+                Design OS
               </span>
             </div>
-            
+
             <div className="hidden md:block">
               <MainNav items={navigationItems} onNavigate={onNavigate} />
             </div>
           </div>
 
           <div className="flex items-center gap-4">
-             <button
+            <button
               onClick={onVoiceTrigger}
               className="flex items-center justify-center h-10 w-10 rounded-full bg-violet-100 text-violet-700 hover:bg-violet-200 dark:bg-violet-900/30 dark:text-violet-400 dark:hover:bg-violet-900/50 transition-colors"
               aria-label="Voice Command"
@@ -49,14 +49,14 @@ export function AppShell({
             </button>
 
             <div className="h-6 w-px bg-zinc-200 dark:bg-zinc-800" />
-            
+
             <UserMenu user={user} onLogout={onLogout} />
           </div>
         </div>
-        
+
         {/* Mobile Navigation (Simple generic implementation for preview) */}
         <div className="md:hidden border-t border-zinc-200 dark:border-zinc-800 px-4 py-2 overflow-x-auto">
-           <MainNav items={navigationItems} onNavigate={onNavigate} mobile />
+          <MainNav items={navigationItems} onNavigate={onNavigate} mobile />
         </div>
       </header>
 
