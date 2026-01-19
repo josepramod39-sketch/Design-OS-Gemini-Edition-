@@ -11,11 +11,12 @@ If the Playwright MCP tool is not available, output this EXACT message to the us
 ---
 To capture screenshots, I need the Playwright MCP server installed. Please run:
 
-```
+```bash
 claude mcp add playwright npx @playwright/mcp@latest
 ```
 
-Then restart this Claude Code session and run `/screenshot-design` again
+Then restart this CLI session and run `/screenshot-design` again.
+
 ---
 
 Do not substitute different package names or modify the command. Output it exactly as written above.
