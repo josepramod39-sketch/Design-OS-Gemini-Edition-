@@ -1,6 +1,6 @@
-<img width="1280" height="640" alt="Design OS" src="https://github.com/user-attachments/assets/a9c04258-7b9a-45b6-8475-3431cdf5dbe9" />
-
 # Design OS (Gemini Edition)
+
+![Design OS](https://github.com/user-attachments/assets/a9c04258-7b9a-45b6-8475-3431cdf5dbe9)
 
 **The missing design process between your idea and your codebase.**
 
@@ -71,7 +71,7 @@ Design OS powers a guided design and architecture process. You + AI, working tog
 
 ## File Structure
 
-```
+```text
 product/                           # Product definition (portable)
 ├── product-overview.md            # Product description
 ├── product-roadmap.md             # List of sections
