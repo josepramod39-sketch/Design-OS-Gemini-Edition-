@@ -1,0 +1,89 @@
+{
+  "_meta": {
+    "models": {
+      "insights": "AI-generated recommendations displayed as cards in the feed.",
+      "product": "Contextual product data linked to the insight."
+    },
+    "relationships": [
+      "Each Insight can optionally link to a specific Product"
+    ]
+  },
+  "insights": [
+    {
+      "id": "ins-001",
+      "type": "stockout_risk",
+      "title": "High Velocity Alert",
+      "description": "Jack Daniel's Old No. 7 is selling 2.5x faster than usual. At this rate, you'll stock out by Friday evening.",
+      "score": 0.98,
+      "dateCreated": "2024-01-19T08:30:00Z",
+      "primaryAction": {
+        "label": "Reorder 10 Cases",
+        "actionType": "reorder",
+        "payload": { "productId": "prod-001", "quantity": 10 }
+      },
+      "product": {
+        "id": "prod-001",
+        "name": "Jack Daniel's Old No. 7",
+        "imageUrl": "https://placehold.co/400x600/2a2a2a/white?text=Jack+Daniels",
+        "currentStock": 5
+      }
+    },
+    {
+      "id": "ins-002",
+      "type": "dead_stock",
+      "title": "Slow Mover Detected",
+      "description": "Old Strange Liqueur hasn't moved a single unit in 60 days. It's tying up $450 in capital.",
+      "score": 0.85,
+      "dateCreated": "2024-01-18T14:15:00Z",
+      "primaryAction": {
+        "label": "Apply 15% Discount",
+        "actionType": "discount",
+        "payload": { "productId": "prod-006", "discountPercent": 15 }
+      },
+      "product": {
+        "id": "prod-006",
+        "name": "Old Strange Liqueur",
+        "imageUrl": "https://placehold.co/400x600/2a2a2a/white?text=Old+Strange",
+        "currentStock": 24
+      }
+    },
+    {
+      "id": "ins-003",
+      "type": "seasonal",
+      "title": "Upcoming Holiday: St. Patrick's Day",
+      "description": "Irish Whiskey sales typically spike 300% in 4 weeks. Prepare your inventory now to capture this demand.",
+      "score": 0.92,
+      "dateCreated": "2024-01-19T09:00:00Z",
+      "primaryAction": {
+        "label": "Review Irish Whiskey Order",
+        "actionType": "view_list",
+        "payload": { "category": "Irish Whiskey" }
+      },
+      "product": {
+        "id": "prod-009",
+        "name": "Jameson Irish Whiskey",
+        "imageUrl": "https://placehold.co/400x600/2a2a2a/white?text=Jameson",
+        "currentStock": 12
+      }
+    },
+    {
+      "id": "ins-004",
+      "type": "pricing_opportunity",
+      "title": "Margin Opportunity",
+      "description": "Your price for Grey Goose 750ml is 10% lower than the local market average. You could increase margin without losing volume.",
+      "score": 0.78,
+      "dateCreated": "2024-01-17T11:20:00Z",
+      "primaryAction": {
+        "label": "Increase Price to $34.99",
+        "actionType": "update_price",
+        "payload": { "productId": "prod-007", "newPrice": 34.99 }
+      },
+      "product": {
+        "id": "prod-007",
+        "name": "Grey Goose Vodka",
+        "imageUrl": "https://placehold.co/400x600/2a2a2a/white?text=Grey+Goose",
+        "currentStock": 18
+      }
+    }
+  ]
+}

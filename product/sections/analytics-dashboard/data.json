@@ -1,0 +1,64 @@
+{
+  "_meta": {
+    "models": {
+      "kpiStats": "High-level performance metrics for the top of the dashboard.",
+      "salesTrend": "Daily revenue and cost data for line charts.",
+      "categoryStat": "Sales distribution by product category.",
+      "productPerformance": "Ranking of products by sales volume (Top sellers / Dead stock)."
+    },
+    "relationships": [
+      "Sales Trends aggregate daily transactions",
+      "Product Performance links back to specific Products"
+    ]
+  },
+  "kpiStats": {
+    "totalStockValue": 145200.50,
+    "totalStockValueChange": 2.4,
+    "monthlySales": 48350.00,
+    "monthlySalesChange": 12.5,
+    "lowStockCount": 8,
+    "deadStockCount": 15
+  },
+  "salesTrends": [
+    { "date": "2024-01-01", "revenue": 1200, "cost": 400 },
+    { "date": "2024-01-02", "revenue": 1500, "cost": 600 },
+    { "date": "2024-01-03", "revenue": 1100, "cost": 300 },
+    { "date": "2024-01-04", "revenue": 1800, "cost": 800 },
+    { "date": "2024-01-05", "revenue": 2200, "cost": 1200 },
+    { "date": "2024-01-06", "revenue": 2800, "cost": 900 },
+    { "date": "2024-01-07", "revenue": 2100, "cost": 500 },
+    { "date": "2024-01-08", "revenue": 1300, "cost": 450 },
+    { "date": "2024-01-09", "revenue": 1450, "cost": 400 },
+    { "date": "2024-01-10", "revenue": 1600, "cost": 750 },
+    { "date": "2024-01-11", "revenue": 1900, "cost": 600 },
+    { "date": "2024-01-12", "revenue": 2400, "cost": 1100 },
+    { "date": "2024-01-13", "revenue": 3100, "cost": 1500 },
+    { "date": "2024-01-14", "revenue": 2600, "cost": 800 },
+    { "date": "2024-01-15", "revenue": 1400, "cost": 500 },
+    { "date": "2024-01-16", "revenue": 1550, "cost": 550 },
+    { "date": "2024-01-17", "revenue": 1700, "cost": 600 },
+    { "date": "2024-01-18", "revenue": 2100, "cost": 900 },
+    { "date": "2024-01-19", "revenue": 2900, "cost": 1200 },
+    { "date": "2024-01-20", "revenue": 3300, "cost": 1400 }
+  ],
+  "categoryStats": [
+    { "category": "Whiskey", "sales": 18500, "percentage": 38 },
+    { "category": "Vodka", "sales": 12400, "percentage": 25 },
+    { "category": "Tequila", "sales": 8200, "percentage": 17 },
+    { "category": "Gin", "sales": 4100, "percentage": 9 },
+    { "category": "Rum", "sales": 3200, "percentage": 7 },
+    { "category": "Other", "sales": 1950, "percentage": 4 }
+  ],
+  "topMovers": [
+    { "id": "p1", "name": "Jack Daniel's Old No. 7", "category": "Whiskey", "soldCount": 145, "trend": "up" },
+    { "id": "p2", "name": "Tito's Handmade Vodka", "category": "Vodka", "soldCount": 132, "trend": "up" },
+    { "id": "p3", "name": "Casamigos Blanco", "category": "Tequila", "soldCount": 98, "trend": "stable" },
+    { "id": "p4", "name": "Jameson Irish Whiskey", "category": "Whiskey", "soldCount": 85, "trend": "down" },
+    { "id": "p5", "name": "Hendrick's Gin", "category": "Gin", "soldCount": 64, "trend": "up" }
+  ],
+  "slowMovers": [
+    { "id": "p6", "name": "Old Strange Liqueur", "category": "Liqueur", "soldCount": 0, "daysInStock": 145 },
+    { "id": "p7", "name": "Fancy French Brandy", "category": "Brandy", "soldCount": 1, "daysInStock": 92 },
+    { "id": "p8", "name": "Bottom Shelf Rum", "category": "Rum", "soldCount": 2, "daysInStock": 65 }
+  ]
+}
